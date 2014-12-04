@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 </head>
-<body class=page>
+<body class=page unresolved>
 <style>
     div{
         font-family:verdana;
@@ -15,7 +15,7 @@
         text-decoration: underline;
         text-transform: uppercase;
     }
-    custom-video{
+    custom-tagname{
         border:1px solid black;
         background: gray;
         display: block;
@@ -35,11 +35,11 @@
 
 <h2>Document Title</h2>
 
-<custom-video videoid="sampleid">
+<custom-tagname videoid="sampleid">
     <h2>Child Title</h2>
-</custom-video>
+</custom-tagname>
 
-<template id="tmpl-video">
+<template id="tags-shadow">
     <style>
         ::content h2{
             color: white !important;
@@ -64,16 +64,14 @@ proto.createdCallback = function(){
     var shadow = this.createShadowRoot();
 
     // 2. Fill it with markup goodness.
-    shadow.appendChild(document.importNode( document.getElementById('tmpl-video').content, true ));
+    shadow.appendChild(document.importNode( document.getElementById('tags-shadow').content, true ));
 
-    console.log('created');
-    console.log(arguments);
 };
 proto.attributeChangedCallback = function(name, oldvalue, newvalue){
     console.log(arguments);
 };
 
-var CustomVideo = document.registerElement('custom-video', {
+var CustomTagname = document.registerElement('custom-tagname', {
     prototype : proto
 });
 

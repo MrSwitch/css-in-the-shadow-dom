@@ -8,7 +8,9 @@
 
 
 **tl;dr;**
-	Shadow Dom, the CSS condom - preventing unwanted leakage.
+	
+> Shadow Dom, the CSS condom 
+>- preventing unwanted leakage.
 
 
 
@@ -34,6 +36,11 @@ CSS suffers from leakage freakage!
 * Use `!important`
 
 
+
+
+
+*ULTIMATLY*
+
 CSS leakage *= unwanted impregnanation*.
 
 
@@ -48,7 +55,7 @@ CSS leakage *= unwanted impregnanation*.
 
 > As we all (should) probably know by now, specificity is is one of CSS’ most troublesome features, and is an area that soon becomes hard to manage on projects of any reasonable size. Specificity is a trait best avoided, which is why we don’t use IDs in CSS, and we don’t nest selectors unless absolutely necessary.
 
-[Harry Roberts](http://csswizardry.com/2014/10/the-specificity-graph/)
+- [Harry Roberts](http://csswizardry.com/2014/10/the-specificity-graph/)
 
 
 
@@ -80,9 +87,14 @@ CSS leakage *= unwanted impregnanation*.
 
 
 # Shadow DOM
-(Shit Hot and Awesomeness, Dude! Omg! Wow!)
+Stands for: Shit Hot and Awesomeness, Dude! Omg! Wow!
 
-Like mini christmas presents within elements, lovingly wrapped, and hidden from view.
+	If HTML elements were Xmas presents, 
+	the Shadow Dom would be the wrapping.
+
+- Andrew Dodson (@SydCSS, Dec 4th 2014)
+
+
 
 
 # What is it?
@@ -98,10 +110,10 @@ Like mini christmas presents within elements, lovingly wrapped, and hidden from 
 
 # Browser
 
-* Chrome √
-* FireFox (flag)
-* IE (under consideration)
-* Safari ?
+* Chrome    √
+* FireFox   flag
+* IE        ?
+* Safari    n/a
 
 
 
@@ -135,7 +147,7 @@ Import widget styles.
 
 	root.innerHTML += '<style>@import "widget.css";</style>';
 
-Note: BEM is best *Big Engineering Misunderstanding*
+Note: Use BEM, and it will mostly work
 
 	.parent {...}
 	.parent__child {...}
@@ -143,7 +155,9 @@ Note: BEM is best *Big Engineering Misunderstanding*
 
 
 
-### Trigger styles from host
+
+
+### Trigger styles from :host
 
 For host node conditions
 
@@ -159,11 +173,16 @@ For nodes ancestor conditions
 
 
 
+
+
+
 ## Style distributed Nodes
 
 	::content h2{
 		text-decoration:underline;
 	}
+
+
 
 
 ## Style based on context
@@ -174,15 +193,18 @@ For nodes ancestor conditions
 
 
 
-## Backwards Compatibility CSS
 
-These do not sit well together
+
+
+## Shadow's CSS and its Backwards Snapability
+
+These do not sit well together in 2014 browsers
 
 	:host, .player{
 		background:black;
 	}
 
-[demo entwined styles](demo2.html) will break in other browsers.
+[demo entwined styles](demo2.html) will break in all but Chrome.
 
 
 Hack: Change it via javascript!
@@ -196,8 +218,9 @@ Hack: Change it via javascript!
 
 
 
+
 ## Theming
-Just to prove this isn't like an IFrame, lets let a little light into the black box
+Unlike the black box which is IFrames this will let light in.
 
 * `.player::shadow`  - reference the shadow psuedo element
 * `body /deep/ .theme-background-color` - optionally target shadow content and elements nested nodes (see themes)[themes.css]
@@ -208,13 +231,13 @@ Just to prove this isn't like an IFrame, lets let a little light into the black 
 
 
 
-# Custom Elements
+# Heads up, Custom Elements
 
 If you dont want to get caught by styles targeting native elements, create your own.
 
-<custom-elements></custom-elements>
+<custom-tagname></custom-tagname>
 
-	custom-element{
+	custom-tagname{
 		color:red;
 		display:block;
 	}
@@ -222,16 +245,26 @@ If you dont want to get caught by styles targeting native elements, create your 
 
 Even register handlers to style them before they are drawn to the page.
 
-	registerHandler('custom-element', { proto : ... })
+	registerHandler('custom-tagname', { proto : ... })
 
 
-# Shadow Dom + Templates + Imports + Custom Elements 
+[custom elements](./custom-tag.html)
 
-*STIC*
+
+
+
+
+
+
+# Summary
+
+Shadow condom could save you about 18 years of bugfixing.
 
 
 
 # References
+
+Fantastic articles ...
 
 * [Shadow DOM 101](www.html5rocks.com/en/tutorials/webcomponents/shadowdom/)
 * [Shadow DOM 201](www.html5rocks.com/en/tutorials/webcomponents/shadowdom-201)

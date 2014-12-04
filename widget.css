@@ -89,7 +89,7 @@
 		box-shadow:0 0 0 gold;
 	}
 	to {
-		text-shadow:0 0 20px gold;
-		box-shadow:0 0 20px gold;
+		text-shadow:0 0 50px gold;
+		box-shadow:0 0 50px gold;
 	}
 }

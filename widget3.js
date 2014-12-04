@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function(){
 		// Styles
 		var styles = Array.prototype.slice.call(document.querySelector('link[href$="widget3.css"]').sheet.rules).map(function(rule){return rule.cssText;}).join('');
 
+		// Wrap the .player style within :host( )
 		root.innerHTML = '<style>'+ styles.replace(/([^\s\}]*\.player[^\s\{]*) /g, ':host($1) ') +'</style>';
 		root.innerHTML += '<content></content>';
 
