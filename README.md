@@ -9,8 +9,7 @@
 
 **tl;dr;**
 	
-> Shadow Dom, the CSS condom 
->- preventing unwanted leakage.
+Shadow Dom, the CSS condom - preventing unwanted leakage.
 
 
 
