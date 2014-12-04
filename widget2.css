@@ -1,0 +1,113 @@
+/*
+    demo.css
+    This works in Shadow DOM... but wont compile for regular DOM
+*/
+
+.player,
+:host{
+	position: relative;
+}
+
+.player .media,
+.player .controls,
+:host .controls,
+::content .media
+{
+	width:100%;
+	height:0;
+	padding-top:56.25%;
+}
+
+.media,
+::content .media{
+	position: relative;
+	background: black;
+}
+
+.player .center,
+:host .center{
+	position: absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom: 0;
+	text-align:center;
+}
+
+:host .center:before,
+.player .center:before{
+	content:"";
+	margin-left:-0.5em;
+	height:100%;
+	vertical-align: middle;
+	min-height: 100%;
+	display: inline-block
+}
+
+:host .controls,
+.player .controls{
+	position: absolute;
+	top:0;
+}
+
+:host(.player.ready) > .controls .btn-play,
+.player.ready > .controls .btn-play
+{
+	-webkit-animation: fadein 1s, pulse 1s 1s infinite alternate;
+	-webkit-animation-fill-mode:forwards;
+}
+
+:host(.player.ready) > .controls .btn-play:hover,
+.player.ready > .controls .btn-play:hover
+{
+	-webkit-animation-play-state: paused, paused;
+}
+
+:host .btn-play,
+.player div .btn-play{
+	vertical-align: middle;
+	background:rgba(0,0,0,0.5);
+	border:0.1em solid white;
+	border-radius: 50%;
+	color:white;
+	width: 1.5em;
+	height: 1.5em;
+	line-height: 1.5em;
+	font-size:4rem;
+	box-sizing:content-box;
+}
+
+:host .btn-play:after,
+.player div .btn-play:after{
+	content: "\25ba";
+	margin-left:10px;
+}
+
+
+::content h2,
+.player h2{
+	font-family: sans-serif;
+}
+
+
+@-webkit-keyframes fadein{
+	from {
+		transform:scale(0.8);
+		opacity:0;
+	}
+	to {
+		transform:scale(1);
+		opacity:1;
+	}
+}
+
+@-webkit-keyframes pulse{
+	50% {
+		text-shadow:0 0 0 gold;
+		box-shadow:0 0 0 gold;
+	}
+	to {
+		text-shadow:0 0 20px gold;
+		box-shadow:0 0 20px gold;
+	}
+}
