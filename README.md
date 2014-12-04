@@ -61,7 +61,7 @@ CSS leakage *= unwanted impregnanation*.
 
 
 
-## Fix 2: Sandbox - iframe
+## Fix 2: iframe it
 
 	<iframe src="widget.html">
 	    #document
@@ -97,7 +97,7 @@ Stands for: Shit Hot and Awesomeness, Dude! Omg! Wow!
 
 
 
-# What is it?
+## What is it?
 
 	<video>
 	  #shadow-root
@@ -108,7 +108,7 @@ Stands for: Shit Hot and Awesomeness, Dude! Omg! Wow!
 
 
 
-# Browser
+## Browser
 
 * Chrome    √
 * FireFox   flag
