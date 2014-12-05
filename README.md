@@ -7,7 +7,7 @@
 
 **tl;dr;**
 	
-Shadow Dom, the CSS condom, preventing unwanted leakage.
+Shadow Dom is the CSS condom, it prevents unwanted leakage.
 
 
 
