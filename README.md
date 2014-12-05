@@ -17,9 +17,9 @@ Shadow Dom is the CSS condom, it prevents unwanted leakage.
 
 CSS suffers from leakage freakage!
 
-![demo widget - button broken](images/example-broken.png)
-![demo widget - button as designed](images/example-fixed.png)
-![style inspector showing styles are overiden](images/controls-problem-inspector.png)
+[demo widget - button broken](images/example-leaked.png)
+[demo widget - button as designed](images/example-fixed.png)
+[style inspector showing styles are overiden](images/controls-problem-inspector.png)
 
 
 [demo css styles](./demo.html)
