@@ -19,9 +19,9 @@ CSS suffers from leakage freakage!
 
 Take a look at the play button, it should be white!
 
-<img alt="" title="demo widget - button broken" src="images/example-leaked.png" width=200 />
-<img alt="" title="style inspector showing styles are overiden" src="images/controls-problem-inspector.png" width=200 />
-<img alt="" title="demo widget - button as designed" src="images/example-fixed.png" width=200 />
+[demo widget - button broken](images/example-leaked.png)
+[style inspector showing styles are overiden](images/controls-problem-inspector.png)
+[demo widget - button as designed](images/example-fixed.png)
 
 
 [demo css styles](./demo.html)
