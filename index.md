@@ -18,7 +18,7 @@ h1:before{
 <script>
 window.addEventListener('scroll', function(){
   var b = document.body;
-  b.style.backgroundPosition = "0 -"+(b.scrollTop*100/b.scrollHeight)+"%";
+  b.style.backgroundPosition = "0 "+(b.scrollTop*100/b.scrollHeight)+"%";
 });
 </script>
 
