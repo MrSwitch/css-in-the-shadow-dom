@@ -10,7 +10,7 @@ h1{
   background-position:inherit;
 }
 h1:before{ 
-  background: url(http://photos2.meetupstatic.com/photos/event/d/6/2/d/highres_432114829.jpeg);
+  background: url(https://pbs.twimg.com/media/B3_yty7CUAAp64l.jpg:large);
   background-size: 100%;
   background-position: inherit;
 }
