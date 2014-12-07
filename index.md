@@ -15,11 +15,18 @@ h1:before{
   background-position: inherit;
 }
 </style>
-<script>
-window.addEventListener('scroll', function(){
-  var b = document.body;
-  b.style.backgroundPosition = "0 "+(b.scrollTop*100/b.scrollHeight)+"%";
-});
-</script>
 
 {% include_relative README.md %}
+
+<script>
+(function(){
+  var b = document.body;
+  var h = Array.prototype.slice.call(document.getElementsByTagName('h1'));
+  function bgPos(h){
+    h.style.backgroundPosition = "0 "+ (h.getBoundingClientRect().top*100/b.clientHeight)+"%";
+  }
+  window.addEventListener('scroll', function(){
+    h.forEach(bgPos);
+  });
+})();
+</script>
