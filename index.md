@@ -6,7 +6,7 @@ title: CSS in the ShadowDOM
 <style>
 h1{ 
   color:white;
-  text-shadow:0 0 100px black;
+  text-shadow:0 0 20px black;
   background-position:inherit;
 }
 h1:before{ 
